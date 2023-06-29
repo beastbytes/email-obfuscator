@@ -1,0 +1,44 @@
+{
+    "name": "beastbytes/emailobfuscator",
+    "description": "Widget to obfuscate email addresses",
+    "keywords": ["email", "email address", "obfuscate", "obfuscation", "widget"],
+    "type": "extension",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Chris Yates",
+            "email": "chris.l.yates@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "yiisoft/arrays": "^3.0",
+        "yiisoft/html": "^3.0",
+        "yiisoft/view": "^8.0",
+        "yiisoft/widget": "^2.0"
+    },
+    "require-dev": {
+        "consolidation/robo": "^4.0",
+        "phpunit/phpunit": "^10.0",
+        "roave/infection-static-analysis-plugin": "^1.0",
+        "roave/security-advisories": "dev-latest",
+        "vimeo/psalm": "^5.0",
+        "yiisoft/test-support": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BeastBytes\\Widgets\\EmailObfuscator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BeastBytes\\Widgets\\EmailObfuscator\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "infection": "roave-infection-static-analysis-plugin",
+        "psalm": "psalm",
+        "robo": "robo",
+        "test": "phpunit --testdox"
+    }
+}
