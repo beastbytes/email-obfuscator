@@ -67,7 +67,7 @@ class EmailObfuscatorTest extends TestCase
 
         $html = $this->webView->render( '/layout.php', ['content' => $content]);
         $matches = [];
-        preg_match('/id="(email-obfuscator_\d+)"/', $html, $matches);
+        preg_match('/id="(' . EmailObfuscator::ID_PREFIX . '\d+)"/', $html, $matches);
 
         $this->assertJsFunction($html);
         $this->assertStringContainsString(
@@ -102,7 +102,7 @@ class EmailObfuscatorTest extends TestCase
 
         $html = $this->webView->render( '/layout.php', ['content' => $content]);
         $matches = [];
-        preg_match('/id="(email-obfuscator_\d+)"/', $html, $matches);
+        preg_match('/id="(' . EmailObfuscator::ID_PREFIX . '\d+)"/', $html, $matches);
 
         $this->assertJsFunction($html);
         $this->assertStringContainsString(
@@ -138,7 +138,7 @@ class EmailObfuscatorTest extends TestCase
 
         $html = $this->webView->render( '/layout.php', ['content' => $content]);
         $matches = [];
-        preg_match('/id="(email-obfuscator_\d+)"/', $html, $matches);
+        preg_match('/id="(' . EmailObfuscator::ID_PREFIX . '\d+)"/', $html, $matches);
 
         $this->assertJsFunction($html);
         $this->assertStringContainsString(
@@ -241,7 +241,7 @@ class EmailObfuscatorTest extends TestCase
 
         $html = $this->webView->render( '/layout.php', ['content' => $content]);
         $matches = [];
-        preg_match('/id="(email-obfuscator_\d+)"/', $html, $matches);
+        preg_match('/id="(' . EmailObfuscator::ID_PREFIX . '\d+)"/', $html, $matches);
 
         $this->assertJsFunction($html);
         $this->assertStringContainsString(
@@ -268,7 +268,7 @@ class EmailObfuscatorTest extends TestCase
 
         $html = $this->webView->render( '/layout.php', ['content' => $content]);
         $matches = [];
-        preg_match('/id="(email-obfuscator_\d+)"/', $html, $matches);
+        preg_match('/id="(' . EmailObfuscator::ID_PREFIX . '\d+)"/', $html, $matches);
 
         $this->assertJsFunction($html);
         $this->assertStringContainsString(
@@ -295,7 +295,7 @@ class EmailObfuscatorTest extends TestCase
 
         $html = $this->webView->render( '/layout.php', ['content' => $content]);
         $matches = [];
-        preg_match('/id="(email-obfuscator_\d+)"/', $html, $matches);
+        preg_match('/id="(' . EmailObfuscator::ID_PREFIX . '\d+)"/', $html, $matches);
 
         $this->assertJsFunction($html);
         $this->assertStringContainsString(
