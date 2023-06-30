@@ -59,7 +59,7 @@ class EmailObfuscatorTest extends TestCase
             ->render();
 
         $this->assertStringMatchesFormat(
-            '<span id="' . EmailObfuscator::ID_PREFIX . '%d%d%d%d%d%d%d%d%d%d%d%d%d%d">'
+            '<span id="' . EmailObfuscator::ID_PREFIX . '%d">'
             . EmailObfuscator::OBFUSCATED_CONTENT
             . '</span>',
             $content
@@ -94,7 +94,7 @@ class EmailObfuscatorTest extends TestCase
             ->render();
 
         $this->assertStringMatchesFormat(
-            '<span id="' . EmailObfuscator::ID_PREFIX . '%d%d%d%d%d%d%d%d%d%d%d%d%d%d">'
+            '<span id="' . EmailObfuscator::ID_PREFIX . '%d">'
             . $obfusctedContent
             . '</span>',
             $content
@@ -128,7 +128,7 @@ class EmailObfuscatorTest extends TestCase
 
         $this->assertStringMatchesFormat(
             '<span'
-            . ' id="' . EmailObfuscator::ID_PREFIX . '%d%d%d%d%d%d%d%d%d%d%d%d%d%d"'
+            . ' id="' . EmailObfuscator::ID_PREFIX . '%d"'
             . ' class="obfuscated"'
             . '>'
             . EmailObfuscator::OBFUSCATED_CONTENT
@@ -231,7 +231,7 @@ class EmailObfuscatorTest extends TestCase
 
         $this->assertStringMatchesFormat(
             '<span'
-            . ' id="' . EmailObfuscator::ID_PREFIX . '%d%d%d%d%d%d%d%d%d%d%d%d%d%d"'
+            . ' id="' . EmailObfuscator::ID_PREFIX . '%d"'
             . ' title="' . EmailObfuscator::OBFUSCATED_CONTENT . '"'
             . '>'
             . str_replace(['.', '@'], $obfuscators, self::EMAIL_ADDRESS)
